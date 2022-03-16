@@ -1,0 +1,43 @@
+/**
+ * @file ex1.c
+ * @author Joshua Barbosa
+ * @brief 
+ * @version 0.1
+ * @date 2022-03-09
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+typedef struct{
+        float x, y;
+    } Coordinates;
+
+int main(){
+
+    float result;
+
+    Coordinates points[2] = {
+        {0,0},
+        {0,0}
+    };
+
+    for (size_t i = 0; i < 2; i++) {
+        printf("Insira o primeiro ponto (X):");
+        scanf("%f", &points[i].x);
+        printf("Insira o primeiro ponto (Y):");
+        scanf("%f", &points[i].y);
+    }
+
+    result=sqrt(pow((points[1].x-points[0].x), 2) + pow((points[1].y-points[0].y),2));
+
+    printf("Distancia entre esses pontos (cm): %.2f", result);
+
+
+    return 0;
+}
