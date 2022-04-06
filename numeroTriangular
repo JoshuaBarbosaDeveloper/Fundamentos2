@@ -1,0 +1,39 @@
+/**
+ * @file aula18-ex6.c
+ * @author Joshua Barbosa
+ * @brief  6) Considere a funcaox abaixo. O que essa função faz? Escreva
+ uma função não-recursiva que resolve o mesmo problema
+  int funcaox(int a){  if(a <= 0) return 0;  else return a + funcaox(a-1); }//funcaox
+ * @version 0.1
+ * @date 2022-04-04
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+* Calcular numero triangular;
+* \param x numero para calcular;
+*/
+
+int numeroTriangular(int num){
+    return (num*(num+1))/2; //Formula para calcular numero triangular;
+}
+
+int main(){
+    int num = 0; //Declara as variáveis;
+
+    printf("Insira um numero: ");
+    scanf("%i", &num); //Lê o numero;
+
+     //Chama função
+     printf("\e[95;1;5mNumero triangular: %i\n\e[0m", numeroTriangular(num));
+
+
+
+  return 0;
+}//main
